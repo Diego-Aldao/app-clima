@@ -1,0 +1,263 @@
+/* 
+   #818cf8;
+   #a7f3d0;
+   #dbeafe;
+
+   #4338ca
+   #6b7280;
+   #6ee7b7
+*/
+@font-face {
+  font-family: "Inter-Light";
+  src: url(/fonts/Inter-Light.ttf);
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url(/fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(/fonts/Inter-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter-Regular";
+  color: #6b7280f3;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.banner {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(45deg, #dbeafe, #a7f3d0, #818cf8);
+}
+
+.tarjeta {
+  margin: 100px auto 0px;
+  width: 85%;
+  max-width: 570px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.075);
+          box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.075);
+  padding: 5px 20px;
+}
+
+#buscador {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+}
+
+#buscador::-webkit-input-placeholder {
+  font-size: 1.1rem;
+  padding: 8px;
+  text-transform: capitalize;
+  color: #6b7280f3;
+}
+
+#buscador:-ms-input-placeholder {
+  font-size: 1.1rem;
+  padding: 8px;
+  text-transform: capitalize;
+  color: #6b7280f3;
+}
+
+#buscador::-ms-input-placeholder {
+  font-size: 1.1rem;
+  padding: 8px;
+  text-transform: capitalize;
+  color: #6b7280f3;
+}
+
+#buscador::placeholder {
+  font-size: 1.1rem;
+  padding: 8px;
+  text-transform: capitalize;
+  color: #6b7280f3;
+}
+
+.titulo-principal {
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #4338ca, 25%, #6b7280);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Inter-Regular";
+  padding: 15px 0px;
+}
+
+.descripcion-hora {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.descripcion-hora .descripcion {
+  min-width: 80px;
+  font-family: "Inter-Medium";
+  padding-bottom: 5px;
+  color: #474e5c;
+}
+
+.descripcion-hora .hora {
+  padding-bottom: 5px;
+}
+
+.clima-principal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clima-principal .numero-clima {
+  min-width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1rem;
+  padding: 15px 0px;
+  margin-top: 10px;
+}
+
+.clima-principal .numero {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #6ee7b7, 25%, #4338ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Inter-Regular";
+}
+
+.clima-principal .sensacion {
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+.clima-principal .img-clima {
+  width: 35%;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.clima-secundario {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+.clima-secundario .viento,
+.clima-secundario .humedad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clima-secundario .viento {
+  margin-right: 15px;
+}
+
+.clima-secundario .img-clima-sec {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  color: #4338ca;
+  font-size: 1.2rem;
+}
+
+.divisor {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+  margin: 30px 0px 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.dia-extendido {
+  width: 100%;
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+}
+
+.dato-extendido {
+  min-width: 40%;
+  text-align: left;
+}
+
+.dato-2 {
+  text-align: right;
+}
+
+.img-dia-extendido {
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=style.css.map */

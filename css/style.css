@@ -45,6 +45,8 @@ img {
   max-width: 100%;
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .banner {
@@ -61,38 +63,56 @@ img {
   -webkit-box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.075);
           box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.075);
   padding: 5px 20px;
+  min-height: 600px;
+}
+
+.buscar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+}
+
+.buscar i {
+  font-size: 1.4rem;
+  margin-right: 5px;
+  color: #4338ca;
 }
 
 #buscador {
   width: 100%;
   height: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  font-family: "Inter-Regular";
+  font-size: 1.1rem;
+  padding: 8px;
 }
 
 #buscador::-webkit-input-placeholder {
   font-size: 1.1rem;
-  padding: 8px;
   text-transform: capitalize;
   color: #6b7280f3;
 }
 
 #buscador:-ms-input-placeholder {
   font-size: 1.1rem;
-  padding: 8px;
   text-transform: capitalize;
   color: #6b7280f3;
 }
 
 #buscador::-ms-input-placeholder {
   font-size: 1.1rem;
-  padding: 8px;
   text-transform: capitalize;
   color: #6b7280f3;
 }
 
 #buscador::placeholder {
   font-size: 1.1rem;
-  padding: 8px;
   text-transform: capitalize;
   color: #6b7280f3;
 }
@@ -102,13 +122,14 @@ img {
   text-transform: capitalize;
   font-size: 1.5rem;
   background: linear-gradient(45deg, #4338ca, 25%, #6b7280);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Inter-Regular";
   padding: 15px 0px;
 }
 
-.descripcion-hora {
+.descripcion-fecha {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,15 +145,21 @@ img {
   font-size: 1rem;
 }
 
-.descripcion-hora .descripcion {
-  min-width: 80px;
+.descripcion-fecha .descripcion {
+  min-width: 200px;
   font-family: "Inter-Medium";
   padding-bottom: 5px;
   color: #474e5c;
 }
 
-.descripcion-hora .hora {
+.descripcion-fecha .fecha {
   padding-bottom: 5px;
+}
+
+@media (min-width: 480px) {
+  .descripcion-fecha .descripcion {
+    min-width: 80px;
+  }
 }
 
 .clima-principal {
@@ -146,6 +173,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 30px;
 }
 
 .clima-principal .numero-clima {
@@ -169,8 +197,9 @@ img {
 }
 
 .clima-principal .numero {
-  font-size: 3rem;
+  font-size: clamp(3rem, 10vw, 4rem);
   background: linear-gradient(45deg, #6ee7b7, 25%, #4338ca);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Inter-Regular";
@@ -179,12 +208,25 @@ img {
 .clima-principal .sensacion {
   margin-top: 5px;
   text-transform: capitalize;
+  font-size: 0.85rem;
 }
 
 .clima-principal .img-clima {
   width: 35%;
-  height: 100px;
-  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clima-principal .img-clima i {
+  font-size: clamp(3.5rem, 13vw, 6rem);
+  color: #4338ca;
 }
 
 .clima-secundario {
@@ -245,6 +287,11 @@ img {
   text-transform: capitalize;
 }
 
+.dia-extendido i {
+  color: #4338ca;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+}
+
 .dato-extendido {
   min-width: 40%;
   text-align: left;
@@ -258,6 +305,5 @@ img {
   width: 25px;
   height: 25px;
   margin: 0 auto;
-  border: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */

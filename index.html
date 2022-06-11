@@ -4,65 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/weather-icons.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Clima</title>
   </head>
   <body>
     <div class="banner"></div>
     <section class="tarjeta">
-      <input
-        type="text"
-        name="buscador"
-        id="buscador"
-        placeholder="ingresar ciudad"
-      />
-      <h1 class="titulo-principal">mendoza, AR</h1>
-      <div class="descripcion-hora">
-        <p class="descripcion">nublado</p>
-        <p class="hora">domingo, 4:44 pm</p>
+      <div class="buscar">
+        <i class="fas fa-search"></i>
+        <input
+          type="text"
+          name="buscador"
+          id="buscador"
+          placeholder="ingresar ciudad"
+        />
+      </div>
+      <h1 class="titulo-principal" id="ciudad"></h1>
+      <div class="descripcion-fecha">
+        <p class="descripcion" id="descripcion"></p>
+        <p class="fecha" id="fecha"></p>
       </div>
       <div class="clima-principal">
         <p class="numero-clima">
-          <span class="numero">31°c</span>
-          <span class="sensacion">st 30°</span>
+          <span class="numero" id="temp-actual"></span>
+          <span class="sensacion" id="sensacion-termica"></span>
         </p>
-        <img src="" alt="" class="img-clima" />
+        <div class="img-clima" id="img-clima-principal"></div>
       </div>
       <div class="clima-secundario">
         <div class="viento">
           <i class="fas fa-wind img-clima-sec"></i>
-          <p class="txt-viento">6m/s viento</p>
+          <p class="txt-viento" id="viento"></p>
         </div>
         <div class="humedad">
           <i class="fas fa-percentage img-clima-sec"></i>
-          <p class="txt-humedad">33% humedad</p>
+          <p class="txt-humedad" id="humedad"></p>
         </div>
       </div>
       <span class="divisor">Extendido</span>
-      <div class="extendido">
-        <div class="dia-extendido">
-          <p class="dato-extendido">lunes</p>
-          <img src="" alt="" class="img-dia-extendido" />
-          <p class="dato-extendido dato-2">30° / 30°</p>
-        </div>
-        <div class="dia-extendido">
-          <p class="dato-extendido">martes</p>
-          <img src="" alt="" class="img-dia-extendido" />
-          <p class="dato-extendido dato-2">30° / 30°</p>
-        </div>
-        <div class="dia-extendido">
-          <p class="dato-extendido">miercoles</p>
-          <img src="" alt="" class="img-dia-extendido" />
-          <p class="dato-extendido dato-2">30° / 30°</p>
-        </div>
-        <div class="dia-extendido">
-          <p class="dato-extendido">sabado</p>
-          <img src="" alt="" class="img-dia-extendido" />
-          <p class="dato-extendido dato-2">30° / 30°</p>
-        </div>
-      </div>
+      <div class="extendido" id="contenido-extendido"></div>
     </section>
+    <div id="wf"></div>
+    <script src="js/weatherIcons.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

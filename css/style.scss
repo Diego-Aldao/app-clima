@@ -48,6 +48,7 @@ img {
   max-width: 100%;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 //CONTENIDO PRINCIPAL
@@ -65,15 +66,29 @@ img {
   border-radius: 15px;
   box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.075);
   padding: 5px 20px;
+  min-height: 600px;
+}
+.buscar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  i {
+    font-size: 1.4rem;
+    margin-right: 5px;
+    color: $color-texto-1;
+  }
 }
 #buscador {
   width: 100%;
   height: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  font-family: $fuente-Regular;
+  font-size: 1.1rem;
+  padding: 8px;
 }
 #buscador::placeholder {
   font-size: 1.1rem;
-  padding: 8px;
+
   text-transform: capitalize;
   color: $texto-comun;
 }
@@ -82,12 +97,13 @@ img {
   text-transform: capitalize;
   font-size: 1.5rem;
   background: linear-gradient(45deg, $color-texto-1, 25%, $color-texto-2);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: $fuente-Regular;
   padding: 15px 0px;
 }
-.descripcion-hora {
+.descripcion-fecha {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,13 +111,20 @@ img {
   text-transform: capitalize;
   font-size: 1rem;
   .descripcion {
-    min-width: 80px;
+    min-width: 200px;
     font-family: $fuente-Medium;
     padding-bottom: 5px;
     color: #474e5c;
   }
-  .hora {
+  .fecha {
     padding-bottom: 5px;
+  }
+}
+@media (min-width: 480px) {
+  .descripcion-fecha {
+    .descripcion {
+      min-width: 80px;
+    }
   }
 }
 
@@ -110,6 +133,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
   .numero-clima {
     min-width: 65%;
     display: flex;
@@ -121,8 +145,9 @@ img {
     margin-top: 10px;
   }
   .numero {
-    font-size: 3rem;
+    font-size: clamp(3rem, 10vw, 4rem);
     background: linear-gradient(45deg, $color-texto-3, 25%, $color-texto-1);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: $fuente-Regular;
@@ -130,11 +155,17 @@ img {
   .sensacion {
     margin-top: 5px;
     text-transform: capitalize;
+    font-size: 0.85rem;
   }
   .img-clima {
     width: 35%;
-    height: 100px;
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      font-size: clamp(3.5rem, 13vw, 6rem);
+      color: $color-texto-1;
+    }
   }
 }
 
@@ -175,6 +206,10 @@ img {
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
+  i {
+    color: $color-texto-1;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  }
 }
 .dato-extendido {
   min-width: 40%;
@@ -187,5 +222,4 @@ img {
   width: 25px;
   height: 25px;
   margin: 0 auto;
-  border: 1px solid black;
 }
